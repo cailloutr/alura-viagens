@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_between_elements"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/item_pacote_image"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_pacote_image_height"
+                android:contentDescription="@string/imagem_ilustrativa_da_cidade_do_pacote"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:src="@sample/pacotes.json/pacotes/imagem" />
+
+            <TextView
+                android:id="@+id/item_pacote_local"
+                style="@style/Widget.AluraViagens.TextView.ItemPacoreCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_between_elements"
+                app:layout_constraintBottom_toBottomOf="@id/item_pacote_image"
+                app:layout_constraintEnd_toEndOf="@id/item_pacote_image"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/item_pacote_image"
+                app:layout_constraintTop_toTopOf="@id/item_pacote_image"
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="@sample/pacotes.json/pacotes/local" />
+
+            <View
+                android:id="@+id/item_pacote_divisor"
+                style="@style/Widget.AluraVIagens.Divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_pacote_image" />
+
+            <TextView
+                android:id="@+id/item_pacote_dias"
+                style="@style/Widget.AluraViagens.TextView.ItemPacoteDias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_between_elements"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_pacote_divisor"
+                tools:text="@sample/pacotes.json/pacotes/dias" />
+
+            <TextView
+                android:id="@+id/item_pacote_preco"
+                style="@style/Widget.AluraViagens.TextView.ItemPacotePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_between_elements"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/item_pacote_dias"
+                app:layout_constraintTop_toBottomOf="@id/item_pacote_dias"
+                tools:text="@sample/pacotes.json/pacotes/preco" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

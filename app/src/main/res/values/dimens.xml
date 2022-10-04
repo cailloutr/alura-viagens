@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="banner_height">120dp</dimen>
+    <dimen name="banner_text_margin">20dp</dimen>
+    <dimen name="banner_text_size">24sp</dimen>
+    <dimen name="margin_between_elements">8dp</dimen>
+    <dimen name="banner_subttitle_text_size">18sp</dimen>
+    <dimen name="match_constraint">0dp</dimen>
+    <dimen name="card_corner_radius">10dp</dimen>
+    <dimen name="item_pacote_image_height">100dp</dimen>
+</resources>
