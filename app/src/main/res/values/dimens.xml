@@ -2,10 +2,21 @@
 <resources>
     <dimen name="banner_height">120dp</dimen>
     <dimen name="banner_text_margin">20dp</dimen>
-    <dimen name="banner_text_size">24sp</dimen>
-    <dimen name="margin_between_elements">8dp</dimen>
-    <dimen name="banner_subttitle_text_size">18sp</dimen>
+    <dimen name="pagamento_informative_text">20dp</dimen>
     <dimen name="match_constraint">0dp</dimen>
+    <dimen name="divider_height">3dp</dimen>
     <dimen name="card_corner_radius">10dp</dimen>
-    <dimen name="item_pacote_image_height">100dp</dimen>
+    <dimen name="margin_between_elements">8dp</dimen>
+
+    <dimen name="lista_de_pacotes_item_image_height">100dp</dimen>
+    <dimen name="resumo_do_pacote_item_image_height">140dp</dimen>
+
+    <dimen name="banner_text_size">24sp</dimen>
+    <dimen name="price_label_size1">24sp</dimen>
+    <dimen name="price_label_size2">20sp</dimen>
+    <dimen name="banner_subttitle_text_size_1">18sp</dimen>
+    <dimen name="banner_subttitle_text_size_2">16sp</dimen>
+    <dimen name="banner_subttitle_text_size_3">14sp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="edit_text_card_expiration">48dp</dimen>
 </resources>

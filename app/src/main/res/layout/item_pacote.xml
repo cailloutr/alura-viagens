@@ -23,7 +23,7 @@
             <ImageView
                 android:id="@+id/item_pacote_image"
                 android:layout_width="@dimen/match_constraint"
-                android:layout_height="@dimen/item_pacote_image_height"
+                android:layout_height="@dimen/lista_de_pacotes_item_image_height"
                 android:contentDescription="@string/imagem_ilustrativa_da_cidade_do_pacote"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"

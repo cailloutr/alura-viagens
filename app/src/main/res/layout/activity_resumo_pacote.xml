@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ResumoPacoteActivity">
+
+    <ImageView
+        android:id="@+id/resumo_pacote_imageView"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/resumo_do_pacote_item_image_height"
+        android:contentDescription="@string/imagem_ilustrativa_da_cidade_do_pacote"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:src="@drawable/sao_paulo_sp" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_textview_cidade"
+        style="@style/Widget.AluraViagens.TextView.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_between_elements"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resumo_pacote_imageView"
+        tools:text="São Paulo" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_textview_dias"
+        style="@style/Widget.AluraViagens.TextView.SubTittle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        app:layout_constraintStart_toStartOf="@id/resumo_pacote_textview_cidade"
+        app:layout_constraintTop_toBottomOf="@id/resumo_pacote_textview_cidade"
+        tools:text="2 dias" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_textview_periodo"
+        style="@style/Widget.AluraViagens.TextView.SubTittle2"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toStartOf="@id/resumo_pacote_price"
+        app:layout_constraintStart_toStartOf="@id/resumo_pacote_textview_dias"
+        app:layout_constraintTop_toBottomOf="@id/resumo_pacote_textview_dias"
+        tools:text="10/08 - 20/09/2022" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_price"
+        style="@style/Widget.AluraViagens.TextView.ItemPacotePrice"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_between_elements"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toBottomOf="@id/resumo_pacote_textview_periodo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/resumo_pacote_textview_periodo"
+        tools:text="R$ 254,00" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_textview_price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preco_final_label"
+        app:layout_constraintBottom_toTopOf="@id/resumo_pacote_price"
+        app:layout_constraintEnd_toEndOf="@id/resumo_pacote_price" />
+
+    <Button
+        android:id="@+id/resumo_pacote_pagamento_button"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_between_elements"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="@string/realizar_pagamento_button_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

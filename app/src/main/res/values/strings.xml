@@ -1,8 +1,25 @@
 <resources>
     <string name="app_name">Alura Viagens</string>
     <string name="app_bar_title">Pacotes</string>
+    <string name="app_bar_title_resumo_do_pacote_activity">Resumo do Pacote</string>
+
     <string name="banner_inicial">Banner inicial</string>
     <string name="banner_especiais">Especiais</string>
     <string name="banner_country_brasil">Brasil</string>
+
     <string name="imagem_ilustrativa_da_cidade_do_pacote">Imagem ilustrativa da cidade do pacote</string>
+    <string name="preco_final_label">Preço Final:</string>
+    <string name="realizar_pagamento_button_label">Realizar Pagamento</string>
+
+    <string name="formato_perido_pacote">%1$s - %2$s de %3$s</string>
+    <string name="pagamento_activity_informative_label">Digite as informações do cartão de crédito que você deseja usar para o pagamento</string>
+    <string name="valor_da_compra">Valor da compra:</string>
+    <string name="credit_card_number_label">Número do cartão</string>
+    <string name="cartao_mes_hint">MM</string>
+    <string name="cartao_ano_hint">AA</string>
+    <string name="cartao_cvc_label">CVC</string>
+    <string name="finalizar_compra">Finalizar Compra</string>
+    <string name="nome_no_cartao">Nome no cartão</string>
+    <string name="app_bar_tittle_pagamento">Pagamento</string>
+    <string name="mascara_nome_cartao">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\u0020</string>
 </resources>

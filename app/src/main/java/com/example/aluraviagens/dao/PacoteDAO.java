@@ -1,4 +1,4 @@
-package br.com.alura.aluraviagens.dao;
+package com.example.aluraviagens.dao;
 
 import com.example.aluraviagens.model.Pacote;
 

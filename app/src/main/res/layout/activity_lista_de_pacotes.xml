@@ -21,7 +21,7 @@
 
     <TextView
         android:id="@+id/lista_pacotes_especiais"
-        style="@style/Widget.AluraViagens.TextView.Title"
+        style="@style/Widget.AluraViagens.TextView.Banner.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/banner_text_margin"
@@ -35,7 +35,7 @@
 
     <TextView
         android:id="@+id/lista_pacotes_subtitle"
-        style="@style/Widget.AluraViagens.TextView.SubTittle"
+        style="@style/Widget.AluraViagens.TextView.Banner.SubTittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_between_elements"

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PagamentoActivity">
+
+
+    <TextView
+        android:id="@+id/pagamento_activity_informative_label"
+        style="@style/Widget.AluraViagens.TextView.SubTittle2"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pagamento_informative_text"
+        android:text="@string/pagamento_activity_informative_label"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pagamento_activity_valor_da_compra_label"
+        style="@style/Widget.AluraViagens.TextView.SubTittle2"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_between_elements"
+        android:layout_marginTop="@dimen/margin_20"
+        android:text="@string/valor_da_compra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_activity_informative_label" />
+
+    <TextView
+        android:id="@+id/pagamento_activity_valor_da_compra"
+        style="@style/Widget.AluraViagens.TextView.ItemPacotePrice"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:layout_marginEnd="@dimen/margin_between_elements"
+        android:textSize="@dimen/price_label_size1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/pagamento_activity_valor_da_compra_label"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_activity_valor_da_compra_label"
+        tools:text="R$ 543.00" />
+
+    <EditText
+        android:id="@+id/pagamento_activity_numero_do_cartao_edittext"
+        style="@style/Widget.AluraVIagens.EditText"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_between_elements"
+        android:autofillHints="creditCardNumber"
+        android:hint="@string/credit_card_number_label"
+        android:inputType="number"
+        android:maxLength="12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_activity_valor_da_compra" />
+
+    <EditText
+        android:id="@+id/pagamento_activity_validade_cartao_mes_edittext"
+        style="@style/Widget.AluraVIagens.EditText"
+        android:layout_width="@dimen/edit_text_card_expiration"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:autofillHints="creditCardExpirationMonth"
+        android:hint="@string/cartao_mes_hint"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/pagamento_activity_cvc_edittext"
+        app:layout_constraintStart_toStartOf="@id/pagamento_activity_numero_do_cartao_edittext" />
+
+    <EditText
+        android:id="@+id/pagamento_activity_validade_cartao_ano_edittext"
+        style="@style/Widget.AluraVIagens.EditText"
+        android:layout_width="@dimen/edit_text_card_expiration"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_between_elements"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:autofillHints="creditCardExpirationMonth"
+        android:hint="@string/cartao_ano_hint"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/pagamento_activity_cvc_edittext"
+        app:layout_constraintStart_toEndOf="@id/pagamento_activity_validade_cartao_mes_edittext" />
+
+    <EditText
+        android:id="@+id/pagamento_activity_cvc_edittext"
+        style="@style/Widget.AluraVIagens.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:layout_marginEnd="@dimen/margin_between_elements"
+        android:autofillHints="creditCardSecurityCode"
+        android:drawableStart="@drawable/ic_cvc_cartao_de_credito"
+        android:hint="@string/cartao_cvc_label"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_activity_numero_do_cartao_edittext" />
+
+    <EditText
+        android:id="@+id/pagamento_activity_nome_no_cartao_edittext"
+        style="@style/Widget.AluraVIagens.EditText"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_between_elements"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:layout_marginEnd="@dimen/margin_between_elements"
+        android:autofillHints="name"
+        android:digits="@string/mascara_nome_cartao"
+        android:hint="@string/nome_no_cartao"
+        android:inputType="textCapWords"
+        android:maxLength="140"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_activity_cvc_edittext" />
+
+    <Button
+        android:id="@+id/pagamento_activity_finalizar_compra_button"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_between_elements"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="@string/finalizar_compra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_activity_nome_no_cartao_edittext" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
