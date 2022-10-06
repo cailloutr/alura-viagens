@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/holo_orange_dark" />
+        app:srcCompat="@android:color/holo_orange_dark"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/resumo_compra_banner_title"
@@ -28,7 +29,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/resumo_compra_banner"
         app:layout_constraintStart_toStartOf="@id/resumo_compra_banner"
-        app:layout_constraintTop_toTopOf="@id/resumo_compra_banner" />
+        app:layout_constraintTop_toTopOf="@id/resumo_compra_banner"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/resumo_compra_banner_subtitle"
@@ -42,7 +44,8 @@
         app:layout_constraintBottom_toBottomOf="@id/resumo_compra_banner"
         app:layout_constraintEnd_toEndOf="@+id/resumo_compra_banner_title"
         app:layout_constraintStart_toStartOf="@+id/resumo_compra_banner_title"
-        app:layout_constraintTop_toBottomOf="@id/resumo_compra_banner_title" />
+        app:layout_constraintTop_toBottomOf="@id/resumo_compra_banner_title"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/resumo_compra_label_resumo_da_compra"

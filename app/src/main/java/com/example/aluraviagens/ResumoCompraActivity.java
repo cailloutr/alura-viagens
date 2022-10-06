@@ -1,13 +1,11 @@
 package com.example.aluraviagens;
 
-import androidx.annotation.DrawableRes;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.aluraviagens.model.Pacote;
 import com.example.aluraviagens.util.DataUtil;
