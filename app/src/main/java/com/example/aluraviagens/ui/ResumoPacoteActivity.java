@@ -1,8 +1,11 @@
 package com.example.aluraviagens.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,9 +18,7 @@ import com.example.aluraviagens.util.MoedaUtil;
 import com.example.aluraviagens.util.ResourceUtil;
 import com.example.aluraviagens.util.StringUtil;
 
-import java.math.BigDecimal;
-
-public class ResumoPacoteActivity extends AppCompatActivity {
+public class ResumoPacoteActivity extends AppCompatActivity implements PacoteActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +26,14 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_resumo_pacote);
         setTitle(getString(R.string.app_bar_title_resumo_do_pacote_activity));
 
-        Pacote pacote = new Pacote("São Paulo", "@drawable/sao_paulo_sp", 2, new BigDecimal("245.44"));
+        carregaPacoteRecebido();
+    }
 
-        bindViews(pacote);
-
+    private void carregaPacoteRecebido() {
+        if (getIntent().hasExtra(CHAVE_PACOTE)) {
+            Pacote pacote = (Pacote) getIntent().getSerializableExtra(CHAVE_PACOTE);
+            bindViews(pacote);
+        }
     }
 
     private void bindViews(Pacote pacote) {
@@ -54,7 +59,17 @@ public class ResumoPacoteActivity extends AppCompatActivity {
                 DataUtil.getPeriodoString(pacote, resources)
         );
 
-        Intent intent = new Intent(this, PagamentoActivity.class);
+        configuraBotao(pacote);
+    }
+
+    private void configuraBotao(Pacote pacote) {
+        Button realizarPagamentoButton = findViewById(R.id.resumo_pacote_pagamento_button);
+        realizarPagamentoButton.setOnClickListener(v -> vaiParaPagamentoActivity(pacote));
+    }
+
+    private void vaiParaPagamentoActivity(Pacote pacote) {
+        Intent intent = new Intent(ResumoPacoteActivity.this, PagamentoActivity.class);
+        intent.putExtra(CHAVE_PACOTE, pacote);
         startActivity(intent);
     }
 
@@ -64,6 +79,7 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         view.setText(string);
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private void mostraImagem(int viewId, Resources resources, Pacote pacote) {
         ImageView view = findViewById(viewId);
         view.setImageDrawable(
