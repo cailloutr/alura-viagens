@@ -17,6 +17,7 @@
     <dimen name="edit_text_card_expiration">48dp</dimen>
 
     <dimen name="resumo_compra_banner_text_size">30sp</dimen>
+    <dimen name="splash_screen">30sp</dimen>
     <dimen name="banner_text_size">24sp</dimen>
     <dimen name="price_label_size1">24sp</dimen>
     <dimen name="price_label_size2">20sp</dimen>
